@@ -10,17 +10,18 @@ void number_of_products_div()
 	+ 2.вывести пары
 	+ 3.вместо пар, считать произведения
 	+ 4.только пары, кратные 35
-	5.только кол-во пар
+	+ 5.только кол-во пар
 	*/
 	int n(0);
+	int counter(0);
 	cin >> n;
 	vector<int> numbers(n, 0);
 	for (int i(0); i<n; i++)
 	    cin >> numbers[i];
 	for (int j(0); j<n-1; j++)
 	    for (int i(j+1); i<n; i++)
-	        if ((numbers[i]*numbers[j])%35 == 0)
-	        cout << numbers[i]*numbers[j] << endl;
+	        if ((numbers[i]*numbers[j])%35 == 0) counter++;
+	    cout << counter << endl;
 }
 
 int main()
